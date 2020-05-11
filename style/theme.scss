@@ -1,3 +1,4 @@
+//Color Palatte//
 $gray-050: #e5e6e8;
 $gray-100: #cccdd2;
 $gray-200: #b4b4bb;
@@ -31,10 +32,16 @@ $red-700: #770d26;
 $red-800: #500416;
 $red-900: #290505;
 
+$red: $red-600;
+
 $primary: #666877;
 $success: #4366d3;
-$danger: #a42443;
+$danger: $red;
 
+//Font
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Noto+Sans:wght@400;700&family=Noto+Serif&display=swap");
+
+//Spacer defined//
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(
@@ -82,7 +89,7 @@ $spacers: map-merge(
          (
             $spacer * 8,
          )
-         // 128px,,,,
+         // 128px,,,,,,,,,,,
    ),
    $spacers
 );
