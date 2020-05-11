@@ -31,6 +31,10 @@ $red-700: #770d26;
 $red-800: #500416;
 $red-900: #290505;
 
+$primary: #666877;
+$success: #4366d3;
+$danger: #a42443;
+
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(
@@ -78,7 +82,7 @@ $spacers: map-merge(
          (
             $spacer * 8,
          )
-         // 128px,,,
+         // 128px,,,,
    ),
    $spacers
 );
