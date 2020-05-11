@@ -33,9 +33,11 @@ $red-800: #500416;
 $red-900: #290505;
 
 $red: $red-600;
+$blue: $blue-600;
+$gray: $gray-500;
 
-$primary: #666877;
-$success: #4366d3;
+$primary: $gray;
+$success: $blue;
 $danger: $red;
 
 //Font
@@ -89,7 +91,7 @@ $spacers: map-merge(
          (
             $spacer * 8,
          )
-         // 128px,,,,,,,,,,,
+         // 128px,,,,,,,,,,,,,
    ),
    $spacers
 );
