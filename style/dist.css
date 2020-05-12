@@ -2136,7 +2136,7 @@ textarea.form-control {
   margin-left: -1.25rem;
 }
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
-  color: #6c757d;
+  color: #80818d;
 }
 
 .form-check-label {
@@ -11203,7 +11203,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #80818d !important;
 }
 
 .text-black-50 {
@@ -11364,6 +11364,10 @@ h3 {
   border: 0;
 }
 
+.card textarea {
+  color: #fff;
+}
+
 .card-body {
   color: #fff;
   font-family: "Noto Serif", serif;
@@ -11380,8 +11384,17 @@ h3 {
   border-top-right-radius: 0;
 }
 
-#text-area {
-  max-width: max-content;
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  /*remove the resize handle on the bottom right*/
 }
 
 /*# sourceMappingURL=dist.css.map */

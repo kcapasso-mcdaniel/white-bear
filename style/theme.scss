@@ -140,6 +140,8 @@ $h2-font-size: $font-size-base * 1.6875;
 $h3-font-size: $font-size-base * 1.25;
 $h4-font-size: $font-size-base * 1.25;
 
+$text-muted: $gray-400;
+
 //Card
 
 $card-spacer-y: map-get(
@@ -174,6 +176,8 @@ $input-btn-padding-x: map-get(
    $map: $spacers,
    $key: 4,
 );
+$input-btn-font-size: $font-size-base;
+$input-btn-line-height: $line-height-base;
 
 $input-btn-padding-y-sm: map-get(
    $map: $spacers,
@@ -183,6 +187,8 @@ $input-btn-padding-x-sm: map-get(
    $map: $spacers,
    $key: 4,
 );
+$input-btn-font-size-sm: $font-size-sm;
+$input-btn-line-height-sm: $line-height-sm;
 
 $input-btn-padding-y-lg: map-get(
    $map: $spacers,
@@ -192,6 +198,8 @@ $input-btn-padding-x-lg: map-get(
    $map: $spacers,
    $key: 6,
 );
+$input-btn-font-size-lg: $font-size-lg;
+$input-btn-line-height-lg: $line-height-lg;
 
 //Buttons
 

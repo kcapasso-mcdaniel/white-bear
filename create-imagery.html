@@ -20,17 +20,14 @@
                <button class="btn btn-link float-right">Log out</button>
 
                <div
-                  class="btn-group d-flex mb-5"
+                  class="btn-group d-flex"
                   role="navigation"
                   aria-label="navigation"
                >
-                  <button type="button" class="btn btn-secondary">
+                  <button type="button" class="btn btn-secondary tab-active">
                      Create new
                   </button>
-                  <button
-                     type="button"
-                     class="btn btn-secondary tab-separator tab-active"
-                  >
+                  <button type="button" class="btn btn-secondary tab-separator">
                      Review
                   </button>
                   <button type="button" class="btn btn-secondary tab-separator">
@@ -38,25 +35,16 @@
                   </button>
                </div>
 
-               <div class="text-area">
-                  <textarea
-                     rows="4"
-                     cols="15"
-                     placeholder="Add memorable imagery"
-                  ></textarea>
-               </div>
+               <h4 class="my-4 text-center text-muted">
+                  Add memorable imagery
+               </h4>
 
                <div class="mb-5">
                   <div class="card bg-primary">
                      <div class="card-body">
-                        One morning, when Gregor Samsa woke from troubled
-                        dreams, he found himself transformed in his bed into a
-                        horrible vermin. He lay on his armour-like back, and if
-                        he lifted his head a little he could see his brown
-                        belly, slightly domed and divided by arches into stiff
-                        sections. The bedding was hardly able to cover it and
-                        seemed ready to slide off any moment.
+                        <textarea rows="11" class="d-sm-none"></textarea>
                      </div>
+                     <textarea rows="6" class="d-none d-sm-block"></textarea>
                   </div>
                   <div class="card bg-secondary">
                      <div class="card-body">
@@ -70,16 +58,20 @@
                      </div>
                   </div>
                </div>
+
+               <p class="float-right mb-5">0/240</p>
+
+               <div class="clearfix"></div>
+
                <button class="btn btn-link">Back to answer</button>
-               <div class="float-right">
-                  <button class="btn btn-primary">
-                     <img
-                        src="/icons/save.svg"
-                        width="20px"
-                        style="margin-bottom: 5px; margin-right: 4px;"
-                     />Save
-                  </button>
-               </div>
+
+               <button class="btn btn-primary btn-lg float-right">
+                  <img
+                     src="/icons/save.svg"
+                     width="20px"
+                     style="margin-bottom: 3px; margin-right: 5px;"
+                  />Save
+               </button>
             </div>
          </div>
       </div>

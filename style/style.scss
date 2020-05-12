@@ -22,6 +22,9 @@
    border: 0;
 }
 
+.card textarea {
+   color: $white;
+}
 .card-body {
    color: $white;
    font-family: $font-family-serif;
@@ -35,6 +38,17 @@
    border-top-left-radius: 0;
    border-top-right-radius: 0;
 }
-#text-area {
-   max-width: max-content;
+textarea {
+   width: 100%;
+   background-color: transparent;
+
+   border: none;
+   overflow: auto;
+   outline: none;
+
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   box-shadow: none;
+
+   resize: none; /*remove the resize handle on the bottom right*/
 }
