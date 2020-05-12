@@ -11344,6 +11344,10 @@ h3 {
   border: 0;
 }
 
+.btn-group button {
+  font-weight: 400;
+}
+
 .text-brand {
   font-family: "Fira Sans";
 }

@@ -4,6 +4,9 @@
    font-weight: $font-weight-bold;
    border: 0;
 }
+.btn-group button {
+   font-weight: $font-weight-normal;
+}
 .text-brand {
    font-family: $font-family-brand;
 }
