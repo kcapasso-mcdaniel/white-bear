@@ -6,7 +6,77 @@
       <link rel="stylesheet" href="style/dist.css" />
       <title>White Bear</title>
    </head>
-   <body>
-      <hi>White Bear</hi>
+
+   //--background image and logo imaging with header--//
+   <body class="background-image">
+      <div
+         class="landing-page container d-inline-flex justify-content-center"
+         style="margin-bottom: 50px;"
+      >
+         <img src="Images/logo-landing.png" />
+         <h1>White Bear</h1>
+      </div>
+      //--card--//
+      <div class="row">
+         <div class="col-sm-6 offset-sm-4 col-sm-2 d-inline-flex">
+            <div class="card-landing">
+               <div class="card body">
+                  <h2>Nice to meet you</h2>
+                  <p>Sign up for White Bear. Free forever</p>
+                  <p class="text-success float-left">
+                     Let's get you signed up.
+                  </p>
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input
+                     type="email"
+                     class="form-control"
+                     id="exampleInputEmail1"
+                     aria-describedby="emailHelp"
+                  />
+                  <label for="exampleInputPassword1">Create a password</label>
+                  <input
+                     type="password"
+                     class="form-control"
+                     id="exampleInputPassword1"
+                  />
+                  <button type="submit" class="btn btn-success mt-4">
+                     Sign up!
+                  </button>
+                  <button type="submit" class="btn btn-success mb-2">
+                     Let's go!
+                  </button>
+               </div>
+            </div>
+            <div class="col-sm-6">
+               <div class="card-landing d-inline-flex flex-row justify-content-center;">
+                     <div class="card body">
+                        <h2>Welcome back</h2>
+                        <p>Log in with your email address and password</p>
+
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input
+                           type="email"
+                           class="form-control"
+                           id="exampleInputEmail1"
+                           aria-describedby="emailHelp"
+                        />
+                        <label for="exampleInputPassword1">Password</label>
+                        <input
+                           type="password"
+                           class="form-control"
+                           id="exampleInputPassword1"
+                        />
+                        <a href="create-answer.html"
+                           type="submit"
+                           class="btn btn-success float-right"
+                        >
+                           Log in
+                     </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
    </body>
 </html>

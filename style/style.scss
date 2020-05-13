@@ -52,3 +52,21 @@ textarea {
 
    resize: none; /*remove the resize handle on the bottom right*/
 }
+
+.bg-success,
+.bg-danger p.lead {
+   color: $white;
+}
+
+.background-image {
+   background: url("/Images/background-landing.jpg");
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: top;
+   background-color: $black;
+}
+
+.landing-page {
+   font-size: 3.75rem;
+   color: $white;
+}

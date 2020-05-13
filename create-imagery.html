@@ -6,6 +6,21 @@
       <title>White Bear</title>
    </head>
    <body>
+      <div
+         class="w-100 bg-danger py-4 d-flex d-none justify-content-center fixed-top"
+         id="overlay-danger"
+      >
+         <img src="icons/error.svg" width="28px" alt="checkmark" />
+         <p class="lead">Opps Our bad. Please try again.</p>
+      </div>
+      <div
+         class="w-100 bg-success py-4 d-flex justify-content-center fixed-top"
+         id="overlay-success"
+      >
+         <img src="icons/success.svg" width="28px" alt="checkmark" />
+         <p class="lead">Card created!</p>
+      </div>
+
       <div class="container">
          <div class="row">
             <div
@@ -27,9 +42,13 @@
                   <button type="button" class="btn btn-secondary tab-active">
                      Create new
                   </button>
-                  <button type="button" class="btn btn-secondary tab-separator">
+                  <a
+                     href="index.html"
+                     type="button"
+                     class="btn btn-secondary tab-separator"
+                  >
                      Review
-                  </button>
+                  </a>
                   <button type="button" class="btn btn-secondary tab-separator">
                      All cards
                   </button>
@@ -63,9 +82,14 @@
 
                <div class="clearfix"></div>
 
-               <button class="btn btn-link">Back to answer</button>
+               <button class="btn btn-link" id="back-to-answer-imagery">
+                  Back to answer
+               </button>
 
-               <button class="btn btn-primary btn-lg float-right">
+               <button
+                  class="btn btn-primary btn-lg float-right"
+                  id="save-imagery"
+               >
                   <img
                      src="/icons/save.svg"
                      width="20px"
@@ -76,4 +100,6 @@
          </div>
       </div>
    </body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="script.js" defer></script>
 </html>

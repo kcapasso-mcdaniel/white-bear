@@ -108,6 +108,8 @@ $spacers: map-merge(
    $spacers
 );
 
+$paragraph-margin-bottom: 0;
+
 //Links
 $link-color: theme-color("primary");
 $link-decoration: none;
@@ -142,6 +144,9 @@ $h4-font-size: $font-size-base * 1.25;
 
 $text-muted: $gray-400;
 
+$lead-font-size: $font-size-base * 1.25;
+$lead-font-weight: $font-weight-normal;
+
 //Card
 
 $card-spacer-y: map-get(
@@ -153,6 +158,7 @@ $card-spacer-x: map-get(
    $key: 4,
 );
 $card-border-width: $border-width;
+$card-border-radius: $border-radius;
 
 //Border
 $border-width: 2px;
@@ -187,8 +193,8 @@ $input-btn-padding-x-sm: map-get(
    $map: $spacers,
    $key: 4,
 );
-$input-btn-font-size-sm: $font-size-sm;
-$input-btn-line-height-sm: $line-height-sm;
+$input-btn-font-size-sm: $font-size-base;
+$input-btn-line-height-sm: $line-height-base;
 
 $input-btn-padding-y-lg: map-get(
    $map: $spacers,
@@ -198,8 +204,8 @@ $input-btn-padding-x-lg: map-get(
    $map: $spacers,
    $key: 6,
 );
-$input-btn-font-size-lg: $font-size-lg;
-$input-btn-line-height-lg: $line-height-lg;
+$input-btn-font-size-lg: $font-size-base;
+$input-btn-line-height-lg: $line-height-base;
 
 //Buttons
 
@@ -207,24 +213,31 @@ $btn-font-weight: $font-weight-bold;
 
 $btn-padding-y: $input-btn-padding-y;
 $btn-padding-x: $input-btn-padding-x;
+$btn-font-size: $font-size-base;
+$btn-line-height: line-height-base;
 
 $btn-padding-y-sm: $input-btn-padding-y-sm;
 $btn-padding-x-sm: $input-btn-padding-x-sm;
+$btn-font-size-sm: $font-size-base;
+$btn-line-height-sm: $line-height-base;
 
 $btn-padding-y-lg: $input-btn-padding-y-lg;
 $btn-padding-x-lg: $input-btn-padding-x-lg;
+$btn-font-size-lg: $font-size-base;
+$btn-line-height-lg: $line-height-base;
 
 //Inputs
 $input-padding-y: $input-btn-padding-y;
 $input-padding-x: $input-btn-padding-x;
+$input-font-size: $font-size-base;
+$input-line-height: $line-height-base;
 
 $input-padding-y-sm: $input-btn-padding-y-sm;
 $input-padding-x-sm: $input-btn-padding-x-sm;
+$input-font-size-sm: $font-size-base;
+$input-line-height-sm: $line-height-base;
 
 $input-padding-y-lg: $input-btn-padding-y-lg;
 $input-padding-x-lg: $input-btn-padding-x-lg;
-
-//Images
-.img-fluid {
-   @include img-fluid();
-}
+$input-font-size-lg: $font-size-base;
+$input-line-height-lg: $line-height-base;
