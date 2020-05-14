@@ -17,11 +17,17 @@
 .tab-active {
    background-color: $gray-800;
 }
-
+.dropdown {
+   font-size: $font-size-base;
+   background-color: $white;
+   border-color: $black;
+}
 .card {
    border: 0;
 }
-
+.card-body.all-cards {
+   font-size: $font-size-base;
+}
 .card textarea {
    color: $white;
 }
@@ -66,7 +72,28 @@ textarea {
    background-color: $black;
 }
 
+//--landing page--//
+
 .landing-page {
    font-size: 3.75rem;
    color: $white;
+}
+.landing-card {
+   padding: map-get($spacers, 4);
+   margin-bottom: map-get($spacers, 16);
+   font-family: $font-family-sans-serif;
+}
+.sign-up-form {
+   border: thick;
+}
+h1 {
+   font-size: $font-size-base * 3.75;
+   font-family: "Fira Sans";
+}
+h2 {
+   font-size: $font-size-base * 1.6875;
+   font-weight: bold;
+}
+p {
+   font-size: $font-size-base;
 }

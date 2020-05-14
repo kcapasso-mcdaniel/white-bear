@@ -38,56 +38,121 @@
                   </button>
                </div>
 
-               <div class="mb-5">
-                  <div class="card bg-primary">
-                     <div class="card-body">
-                        One morning, when Gregor Samsa woke from troubled
-                        dreams, he found himself transformed in his bed into a
-                        horrible vermin. He lay on his armour-like back, and if
-                        he lifted his head a little he could see his brown
-                        belly, slightly domed and divided by arches into stiff
-                        sections. The bedding was hardly able to cover it and
-                        seemed ready to slide off any moment.
-                     </div>
-                  </div>
-                  <div class="card bg-secondary">
-                     <div class="card-body">
-                        One morning, when Gregor Samsa woke from troubled
-                        dreams, he found himself transformed in his bed into a
-                        horrible vermin. He lay on his armour-like back, and if
-                        he lifted his head a little he could see his brown
-                        belly, slightly domed and divided by arches into stiff
-                        sections. The bedding was hardly able to cover it and
-                        seemed ready to slide off any moment.
-                     </div>
-                  </div>
-                  <div class="card bg-secondary">
-                     <div class="card-body">
-                        One morning, when Gregor Samsa woke from troubled
-                        dreams, he found himself transformed in his bed into a
-                        horrible vermin. He lay on his armour-like back, and if
-                        he lifted his head a little he could see his brown
-                        belly, slightly domed and divided by arches into stiff
-                        sections. The bedding was hardly able to cover it and
-                        seemed ready to slide off any moment.
-                     </div>
+               <div class="search">
+                  <form class="form-inline">
+                     <input
+                        class="form-control mr-sm-2"
+                        type="text"
+                        placeholder="Search"
+                        aria-label="Search"
+                     />
+                     <button
+                        class="btn btn-primary btn-sm my-0 float-right"
+                        type="submit"
+                     >
+                        Search
+                     </button>
+                  </form>
+               </div>
+               <h4 class="text-muted d-inline-block">Sort cards by</h4>
+               <div class="dropdown d-inline-block float-right">
+                  <button
+                     class="btn btn-small btn-outline-primary dropdown-toggle"
+                     type="button"
+                     id="dropdownMenu2"
+                     data-toggle="dropdown"
+                     aria-haspopup="true"
+                     aria-expanded="false"
+                  >
+                     Most recent
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                     <button class="dropdown-item" type="button">
+                        Oldest
+                     </button>
+                     <button class="dropdown-item" type="button">
+                        Hardest
+                     </button>
+                     <button class="dropdown-item" type="button">
+                        Easiest
+                     </button>
                   </div>
                </div>
-               <button class="btn btn-link">Edit</button>
-               <div class="float-right">
-                  <button class="btn btn-outline-primary mr-4">
-                     Needs work
-                  </button>
-                  <button class="btn btn-primary">
-                     <img
-                        src="/icons/thumbs-up.svg"
-                        width="20px"
-                        style="margin-bottom: 5px; margin-right: 2px;"
-                     />Got it
-                  </button>
+               <div class="row mb-5 mt-6">
+                  <div class="col-8 col-sm-10">
+                     <div class="card bg-primary">
+                        <div class="card-body all-cards">
+                           One morning, when Gregor Samsa woke from troubled
+                           dreams, he found himself transformed in his bed into
+                           a horrible vermin. He lay on his armour-like back,
+                           and if he lifted his head a little he could see his
+                           brown belly, slightly domed and divided by arches
+                           into stiff sections. The bedding was hardly able to
+                           cover it and seemed ready to slide off any moment.
+                        </div>
+                     </div>
+                     <div class="card bg-secondary">
+                        <div class="card-body all-cards">
+                           One morning, when Gregor Samsa woke from troubled
+                           dreams, he found himself transformed in his bed into
+                           a horrible vermin. He lay on his armour-like back,
+                           and if he lifted his head a little he could see his
+                           brown belly, slightly domed and divided by arches
+                           into stiff sections. The bedding was hardly able to
+                           cover it and seemed ready to slide off any moment.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4 col-sm-2">
+                     <a href="edit.html" class="float-right btn btn-link">
+                        <img
+                           src="/icons/edit.svg"
+                           width="20px"
+                           style="margin-bottom: 3px; margin-right: 5px;"
+                        />Edit
+                     </a>
+                  </div>
+               </div>
+               <div class="row mb-5 mt-6">
+                  <div class="col-8 col-sm-10">
+                     <div class="card bg-primary">
+                        <div class="card-body all-cards">
+                           One morning, when Gregor Samsa woke from troubled
+                           dreams, he found himself transformed in his bed into
+                           a horrible vermin. He lay on his armour-like back,
+                           and if he lifted his head a little he could see his
+                           brown belly, slightly domed and divided by arches
+                           into stiff sections. The bedding was hardly able to
+                           cover it and seemed ready to slide off any moment.
+                        </div>
+                     </div>
+                     <div class="card bg-secondary">
+                        <div class="card-body all-cards">
+                           One morning, when Gregor Samsa woke from troubled
+                           dreams, he found himself transformed in his bed into
+                           a horrible vermin. He lay on his armour-like back,
+                           and if he lifted his head a little he could see his
+                           brown belly, slightly domed and divided by arches
+                           into stiff sections. The bedding was hardly able to
+                           cover it and seemed ready to slide off any moment.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4 col-sm-2">
+                     <a href="edit.html" class="float-right btn btn-link">
+                        <img
+                           src="/icons/edit.svg"
+                           width="20px"
+                           style="margin-bottom: 3px; margin-right: 5px;"
+                        />Edit
+                     </a>
+                  </div>
                </div>
             </div>
          </div>
       </div>
    </body>
+   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="script.js" defer></script>
 </html>

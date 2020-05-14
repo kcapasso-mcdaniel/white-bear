@@ -94,16 +94,16 @@ $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge(
    (
-      0: 0,
-      1: 4,
-      2: 8,
-      3: 12,
-      4: 16,
-      5: 24,
-      6: 32,
-      7: 48,
-      8: 64,
-      9: 128,
+      0: 0px,
+      1: 4px,
+      2: 8px,
+      3: 12px,
+      4: $spacer,
+      5: 24px,
+      6: 32px,
+      7: 48px,
+      8: 64px,
+      9: 128px,
    ),
    $spacers
 );
@@ -214,7 +214,7 @@ $btn-font-weight: $font-weight-bold;
 $btn-padding-y: $input-btn-padding-y;
 $btn-padding-x: $input-btn-padding-x;
 $btn-font-size: $font-size-base;
-$btn-line-height: line-height-base;
+$btn-line-height: $line-height-base;
 
 $btn-padding-y-sm: $input-btn-padding-y-sm;
 $btn-padding-x-sm: $input-btn-padding-x-sm;
@@ -241,3 +241,13 @@ $input-padding-y-lg: $input-btn-padding-y-lg;
 $input-padding-x-lg: $input-btn-padding-x-lg;
 $input-font-size-lg: $font-size-base;
 $input-line-height-lg: $line-height-base;
+
+//Dropdown Menu
+$dropdown-min-width: $input-btn-padding-y;
+$dropdown-padding-y: $input-btn-padding-x;
+$dropdown-font-size: $font-size-base;
+$dropdown-color: $black;
+$dropdown-bg: $white;
+$dropdown-border-color: $black;
+$dropdown-border-radius: $border-radius;
+$dropdown-border-width: $border-width;
