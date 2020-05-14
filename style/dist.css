@@ -11443,4 +11443,8 @@ p {
   font-size: 1rem;
 }
 
+thead {
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=dist.css.map */
