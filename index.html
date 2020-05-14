@@ -9,10 +9,14 @@
 
    <body class="background-image">
       <div
-         class="landing-page container d-inline-flex justify-content-center"
+         class="landing-page container-fluid d-inline-flex justify-content-center"
          style="margin-bottom: 50px;"
       >
-         <img src="Images/logo-landing.png" />
+         <img
+            class="img-small img-responsive img-fluid"
+            src="Images/logo-landing.png"
+            alt="outline of bear"
+         />
          <h1>White Bear</h1>
       </div>
 
@@ -21,8 +25,15 @@
             <div class="card landing-card">
                <h2 class="card-title mb-4">Nice to meet you</h2>
                <p>Sign up for White Bear. Free forever</p>
-               <form class="mb-0" id="sign-up-form">
-                  <p class="text-success float-left mb-4">
+               <button
+                  type="submit"
+                  class="btn btn-success mb-4"
+                  id="sign-up-button"
+               >
+                  Sign up!
+               </button>
+               <form class="mb-0 d-none" id="sign-up-form">
+                  <p class="text-success float-left">
                      Let's get you signed up.
                   </p>
                   <label for="exampleInputEmail1">Email address</label>
@@ -38,18 +49,16 @@
                      class="form-control mb-4"
                      id="exampleInputPassword1"
                   />
-                  <button type="submit" class="btn btn-success mt-2 w-100">
+                  <button
+                     type="submit"
+                     class="btn btn-success mt-4 w-100"
+                     id="lets-go-button"
+                  >
                      Let's go!
                   </button>
                </form>
-               <button
-                  type="submit"
-                  class="btn btn-success mt-4"
-                  id="sign-up-button"
-               >
-                  Sign up!
-               </button>
             </div>
+            <div class="w-25"></div>
             <div class="col-6 d-inline-flex">
                <div class="card landing-card">
                   <h2 class="card-title">Welcome back</h2>

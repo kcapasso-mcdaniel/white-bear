@@ -3474,8 +3474,8 @@ input[type=button].btn-block {
 }
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  border-color: #007bff;
-  background-color: #007bff;
+  border-color: #666877;
+  background-color: #666877;
 }
 .custom-control-input:focus ~ .custom-control-label::before {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -11343,6 +11343,11 @@ h3 {
   font-weight: 400;
 }
 
+.btn.btn-search {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .text-brand {
   font-family: "Fira Sans";
 }
@@ -11408,10 +11413,11 @@ textarea {
 }
 
 .background-image {
-  background: url("/Images/background-landing.jpg");
+  background-image: url("/Images/background-landing.jpg");
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   background-color: #000;
 }
 
