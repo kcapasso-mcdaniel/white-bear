@@ -11358,7 +11358,7 @@ h3 {
 .dropdown {
   font-size: 1rem;
   background-color: #fff;
-  border-color: #000;
+  border-width: 1rem;
 }
 
 .card {

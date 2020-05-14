@@ -20,41 +20,113 @@
                <button class="btn btn-link float-right">Log out</button>
 
                <div
-                  class="btn-group d-flex mb-5"
+                  class="btn-group d-flex"
                   role="navigation"
                   aria-label="navigation"
                >
-                  <button type="button" class="btn btn-secondary">
+                  <button type="button" class="btn btn-secondary tab-active">
                      Create new
                   </button>
-                  <button
+                  <a
+                     href="index.html"
                      type="button"
-                     class="btn btn-secondary tab-separator tab-active"
+                     class="btn btn-secondary tab-separator"
                   >
                      Review
-                  </button>
+                  </a>
                   <button type="button" class="btn btn-secondary tab-separator">
                      All cards
                   </button>
                </div>
 
-               <div class="text-area">
-                  <textarea
-                     rows="4"
-                     cols="15"
-                     placeholder="Out of cards"
-                     id="text-area"
-                  ></textarea>
+               <h4 class="my-4 text-center text-muted">
+                  Edit card
+               </h4>
+
+               <div class="mb-5">
+                  <div class="card bg-primary">
+                     <div class="card-body">
+                        One morning, when Gregor Samsa woke from troubled
+                        dreams, he found himself transformed in his bed into a
+                        horrible vermin. He lay on his armour-like back, and if
+                        he lifted his head a little he could see his brown
+                        belly, slightly domed and divided by arches into stiff
+                        sections. The bedding was hardly able to cover it and
+                        seemed ready to slide off any moment.
+                     </div>
+                  </div>
+                  <div class="card bg-secondary">
+                     <div class="card-body">
+                        One morning, when Gregor Samsa woke from troubled
+                        dreams, he found himself transformed in his bed into a
+                        horrible vermin. He lay on his armour-like back, and if
+                        he lifted his head a little he could see his brown
+                        belly, slightly domed and divided by arches into stiff
+                        sections. The bedding was hardly able to cover it and
+                        seemed ready to slide off any moment.
+                     </div>
+                  </div>
                </div>
 
-               <button class="btn btn-link">Previous card</button>
-               <div class="float-right">
-                  <button class="btn btn-outline-primary">
-                     Get more cards
-                  </button>
+               <p class="float-right mb-5">0/240</p>
+
+               <div class="clearfix"></div>
+
+               <button class="btn btn-link" id="back-to-answer-imagery">
+                  Discard changes
+               </button>
+
+               <a
+                  href="review-empty.html"
+                  class="btn btn-primary btn-lg float-right"
+                  id="save-imagery"
+               >
+                  <img
+                     src="/icons/save.svg"
+                     width="20px"
+                     style="margin-bottom: 3px; margin-right: 5px;"
+                  />Save
+               </a>
+               <h4 class="my-4 text-center text-muted">
+                  Card properties
+               </h4>
+               <table class="table table-responsive table-borderless">
+                  <thead>
+                     <tr>
+                        <th scope="row">Created on:</th>
+                        <th scope="row">Dec.24,2019</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th scope="row">Last attempt:</th>
+                        <td>Dec. 31,2019</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Next attempt:</th>
+                        <td>Jul. 14,2020</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Consecutives:</th>
+                        <td>4</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <div class="form-check">
+                  <input
+                     class="form-check-input"
+                     type="checkbox"
+                     value=""
+                     id="show-delete"
+                  />
+                  <label class="form-check-label" for="show-delete">
+                     Show delete button
+                  </label>
                </div>
             </div>
          </div>
       </div>
    </body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="script.js" defer></script>
 </html>

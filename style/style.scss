@@ -20,7 +20,7 @@
 .dropdown {
    font-size: $font-size-base;
    background-color: $white;
-   border-color: $black;
+   border-width: map-get($spacers, 4);
 }
 .card {
    border: 0;
@@ -80,7 +80,6 @@ textarea {
 }
 .landing-card {
    padding: map-get($spacers, 4);
-   margin-bottom: map-get($spacers, 16);
    font-family: $font-family-sans-serif;
 }
 .sign-up-form {
