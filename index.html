@@ -8,25 +8,24 @@
    </head>
 
    <body class="background-image">
-      <div
-         class="landing-page container-fluid d-inline-flex justify-content-center"
-         style="margin-bottom: 50px;"
-      >
+      <div class="landing-page container-fluid d-inline-flex">
          <img
-            class="img-small img-responsive img-fluid"
+            class="im-sm img-responsive img-fluid mx-4 my-4"
             src="Images/logo-landing.png"
             alt="outline of bear"
          />
-         <h1>White Bear</h1>
+         <h1 class="text-brand mx-4 my-4">White Bear</h1>
       </div>
 
-      <div class="row justify-content-center">
-         <div class="col-6 d-inline-flex">
-            <div class="card landing-card">
-               <h2 class="card-title mb-4">Nice to meet you</h2>
+      <div class="row">
+         <div
+            class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-4 col-md-6 offset-lg-3 col-lg-6 offset-xl-3 col-xl-3 d-inline-flex"
+         >
+            <div class="card landing-card mb-0">
+               <h2 class="card-title">Nice to meet you</h2>
                <p>Sign up for White Bear. Free forever</p>
 
-               <form class="mb-0 d-none" id="sign-up-form">
+               <form class="sign-up-form mb-0 d-none">
                   <p class="text-success float-left">
                      Let's get you signed up.
                   </p>
@@ -53,20 +52,24 @@
                </form>
                <button
                   type="submit"
-                  class="btn btn-success mb-4"
+                  class="btn btn-success mb-4 mt-4"
                   id="sign-up-button"
                >
                   Sign up!
                </button>
             </div>
-            <div class="w-25"></div>
-            <div class="col-6 d-inline-flex">
-               <div class="card landing-card">
-                  <h2 class="card-title">Welcome back</h2>
-                  <p class="mb-4">
-                     Log in with your email address and password
-                  </p>
-
+         </div>
+      </div>
+      <div class="row">
+         <div
+            class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-4 col-md-6 offset-lg-3 col-lg-6 offset-xl-3 col-xl-3 d-inline-flex"
+         >
+            <div class="card landing-card">
+               <h2 class="card-title">Welcome back</h2>
+               <p class="mb-4">
+                  Log in with your email address and password
+               </p>
+               <form>
                   <label for="exampleInputEmail1">Email address</label>
                   <input
                      type="email"
@@ -87,7 +90,7 @@
                   >
                      Log in
                   </a>
-               </div>
+               </form>
             </div>
          </div>
       </div>

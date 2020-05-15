@@ -86,6 +86,11 @@ textarea {
 .sign-up-form {
    border: thick;
 }
+.form-control {
+   padding: $input-btn-padding-x $input-btn-padding-y;
+   border-color: $primary;
+   line-height: 1.5;
+}
 h1 {
    font-size: $font-size-base * 3.75;
    font-family: "Fira Sans";

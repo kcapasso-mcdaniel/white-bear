@@ -11430,6 +11430,11 @@ textarea {
   border: thick;
 }
 
+.form-control {
+  padding: 1rem 8px;
+  border-color: #666877;
+}
+
 h1 {
   font-size: 3.75rem;
   font-family: "Fira Sans";
