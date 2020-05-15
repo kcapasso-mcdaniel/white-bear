@@ -7,11 +7,18 @@
    </head>
    <body>
       <div
-         class="w-100 bg-success py-4 d-none d-flex justify-content-center fixed-top"
+         class="w-100 bg-success py-4 d-none justify-content-center fixed-top"
          id="overlay-success"
       >
          <img src="icons/success.svg" width="28px" alt="checkmark" />
          <p class="lead">Card created!</p>
+      </div>
+      <div
+         class="w-100 bg-danger py-4 d-none justify-content-center fixed-top"
+         id="overlay-danger"
+      >
+         <img src="icons/error.svg" width="28px" alt="checkmark" />
+         <p class="lead">Oops! Our bad. Please try again.</p>
       </div>
       <div class="container">
          <div class="row">
@@ -35,7 +42,7 @@
                      Create new
                   </button>
                   <a
-                     href="index.html"
+                     href="review-answer.html"
                      type="button"
                      class="btn btn-secondary tab-separator"
                   >
@@ -54,7 +61,7 @@
                   Add memorable imagery
                </h4>
 
-               <div class="mb-5">
+               <div class="mb-0">
                   <div class="card bg-primary">
                      <div class="card-body">
                         <textarea rows="11" class="d-sm-none"></textarea>
@@ -81,9 +88,7 @@
                <button class="btn btn-link" id="back-to-answer-imagery">
                   Back to answer
                </button>
-
-               <a
-                  href="review-answer.html"
+               <button
                   class="btn btn-primary btn-lg float-right"
                   id="save-imagery"
                >
@@ -92,7 +97,7 @@
                      width="20px"
                      style="margin-bottom: 3px; margin-right: 5px;"
                   />Save
-               </a>
+               </button>
             </div>
          </div>
       </div>
