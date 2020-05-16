@@ -8,9 +8,9 @@ $("#save-imagery").click(function () {
 $("#back-to-answer-imagery").click(function () {
    $("#overlay-danger").toggleClass("d-none d-flex");
 });
-$("#check-show-delete-button").click(function () {
+$("#customCheck").click(function () {
    $("#delete-button").toggleClass("d-none");
 });
-$(".dropdown").click(function () {
-   $(".dropdown-toggle").toggleClass("show");
+$(".dropdown-toggle").click(function () {
+   $(".dropdown-menu").toggleClass("show");
 });

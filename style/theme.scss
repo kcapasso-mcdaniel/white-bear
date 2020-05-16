@@ -242,17 +242,12 @@ $input-padding-x-lg: $input-btn-padding-x-lg;
 $input-font-size-lg: $font-size-base;
 $input-line-height-lg: $line-height-base;
 
-//Dropdown Menu
-$dropdown-min-width: $input-btn-padding-y;
-$dropdown-padding-y: $input-btn-padding-x;
-$dropdown-font-size: $font-size-base;
-$dropdown-color: $black;
-$dropdown-bg: $white;
-$dropdown-border-color: $black;
-$dropdown-border-radius: $border-radius;
-$dropdown-border-width: $border-width;
+//Table
+
+$table-cell-padding: 0.5rem;
 
 //Checkbox
 $custom-control-indicator-checked-color: $white;
 $custom-control-indicator-checked-bg: $primary;
-$custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg;
+$custom-control-indicator-checked-border-color: $primary;
+$custom-checkbox-indicator-border-radius: 0;
