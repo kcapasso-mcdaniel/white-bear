@@ -11,6 +11,6 @@ $("#back-to-answer-imagery").click(function () {
 $("#customCheck").click(function () {
    $("#delete-button").toggleClass("d-none");
 });
-$(".dropdown-toggle").click(function () {
-   $(".dropdown-menu").toggleClass("show");
+$("#dropdown-toggle-all").click(function () {
+   $("#dropdown-menu-list").toggleClass("show");
 });
