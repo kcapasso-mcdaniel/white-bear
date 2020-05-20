@@ -61,18 +61,26 @@
                <div class="mb-5">
                   <div class="card bg-primary">
                      <div class="card-body">
-                        <textarea rows="11" autofocus></textarea>
+                        <textarea
+                           rows="11"
+                           autofocus
+                           id="answerArea"
+                        ></textarea>
                      </div>
                   </div>
 
-                  <p class="float-right mb-5">143/240</p>
+                  <p
+                     class="float-right mb-5 px-4 py-4 bg-danger text-white"
+                     id="characterCounter"
+                  ></p>
 
                   <div class="clearfix"></div>
 
                   <a
                      href="create-imagery.html"
-                     class="btn btn-outline-primary float-right px-6"
+                     class="btn btn-outline-primary float-right px-6 disabled"
                      id="next-button"
+                     aria-disabled="true"
                   >
                      Next
                   </a>

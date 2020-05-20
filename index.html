@@ -26,24 +26,39 @@
             <div class="card landing-card mb-4">
                <h2 class="card-title">Nice to meet you</h2>
                <p>Sign up for White Bear. Free forever</p>
-
-               <form class="mb-0 d-none" id="sign-up-form">
-                  <p class="text-success mt-4 float-left">
+               <div class="mb-0 mt-4 d-none needs-validation" id="sign-up-form">
+                  <p class="text-success mb-4">
                      Let's get you signed up.
                   </p>
-                  <label for="exampleInputEmail1">Email address</label>
+
+                  <label for="new-userEmail">Email address</label>
                   <input
                      type="email"
-                     class="form-control mb-4"
-                     id="exampleInputEmail1"
-                     aria-describedby="emailHelp"
+                     class="form-control"
+                     id="new-userEmail"
+                     required
                   />
-                  <label for="exampleInputPassword1">Create a password</label>
+                  <p
+                     class="text-danger"
+                     id="emailErrorMessage"
+                     style="display: none;"
+                  >
+                     Please enter your email address.
+                  </p>
+
+                  <label for="new-user-password">Create a password</label>
                   <input
                      type="password"
-                     class="form-control mb-4"
-                     id="exampleInputPassword1"
+                     class="form-control"
+                     id="new-userPassword"
                   />
+                  <p
+                     class="text-danger"
+                     id="passwordErrorMessage"
+                     style="display: none;"
+                  >
+                     Password error will go here.
+                  </p>
                   <button
                      type="submit"
                      class="btn btn-success mt-4 w-100"
@@ -51,7 +66,7 @@
                   >
                      Let's go!
                   </button>
-               </form>
+               </div>
                <button
                   type="submit"
                   class="btn btn-success mb-4 mt-4"
@@ -71,23 +86,22 @@
                   Log in with your email address and password
                </p>
                <form>
-                  <label for="exampleInputEmail1">Email address</label>
+                  <label for="userEmailAddress">Email address</label>
                   <input
                      type="email"
-                     class="form-control"
-                     id="exampleInputEmail1"
-                     aria-describedby="emailHelp"
+                     class="form-control form-group"
+                     id="userEmailAddress"
                   />
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="userPassword">Password</label>
                   <input
                      type="password"
-                     class="form-control"
-                     id="exampleInputPassword1"
+                     class="form-control form-group"
+                     id="userPassword"
                   />
                   <a
                      href="create-answer.html"
                      type="submit"
-                     class="btn btn-success w-50 mt-2 float-right"
+                     class="btn btn-success btn-lg mt-2 float-right"
                   >
                      Log in
                   </a>
