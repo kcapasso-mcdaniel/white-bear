@@ -64,14 +64,14 @@ $("#answerArea").keyup(function () {
    // when textarea has > 0 and <=240 characters enable
    if (answerInput < 0 || answerInput <= 240) {
       $("#next-button").removeClass("disabled");
-      // when it has 0 or >240 disable it
+      // when it has 0 or >240 disable it next button
+      // change color of counter to "danger" when over 240 but contine to allow entry
    } else if (answerInput === 0 || answerInput > 240) {
       $("#next-button").addClass("disabled");
-      $("#characterCounter").css("background-color", "red");
+      $("#characterCounter").addClass("text-danger");
    } else {
       $("next-button").attr("disabled");
    }
-   // Change the color of the entire character counter (241/240) to $danger if the characters in the textarea > 240 characters. The user may type as much as they want and the character counter will keep increasing //
 });
 
 //  Create imagery banners
