@@ -24,9 +24,13 @@
                   role="navigation"
                   aria-label="navigation"
                >
-                  <button type="button" class="btn btn-secondary">
+                  <a
+                     href="create-answer.html"
+                     type="button"
+                     class="btn btn-secondary"
+                  >
                      Create new
-                  </button>
+                  </a>
                   <a
                      href="review-answer.html"
                      type="button"
@@ -62,25 +66,18 @@
                </div>
                <!-- Dropdown menu -->
                <div class="row">
-                  <div class="offset-6 col-12 justify-content-center">
-                     <h4 class="all-cards-important d-flex-inline">
+                  <div
+                     class="offset-6 col-6 offset-sm-2 col-sm-10 d-inline-flex"
+                  >
+                     <h4 class="all-cards-important">
                         Sort cards by
                      </h4>
-                     <div class="dropdown">
-                        <button
-                           class="btn btn-outline-secondary dropdown-toggle"
-                           type="button"
-                           data-toggle="dropdown"
-                           id="dropdown-toggle-all"
-                        >
-                           Most recent <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" id="dropdown-menu-list">
-                           <li><a href="#">Oldest</a></li>
-                           <li><a href="#">Hardest</a></li>
-                           <li><a href="#">Easiest</a></li>
-                        </ul>
-                     </div>
+                     <select class="w-75 px-4 py-2">
+                        <option>Most Recent</option>
+                        <option>Oldest</option>
+                        <option>Hardest</option>
+                        <option>Easiest</option>
+                     </select>
                   </div>
                </div>
                <!-- Cards -->
