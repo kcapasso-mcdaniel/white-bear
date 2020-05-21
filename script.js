@@ -62,15 +62,17 @@ $("#answerArea").keyup(function () {
    console.log(inputCounter);
    // disable "Next" button by default
    // when textarea has > 0 and <=240 characters enable
-   if (answerInput < 0 || answerInput <= 240) {
-      $("#next-button").removeClass("disabled");
+   if (answerInput === 0 || answerInput >= 240) {
+      $("#next-button").attr("disabled", true);
+      $("#characterCounter").addClass("text-danger");
       // when it has 0 or >240 disable it next button
       // change color of counter to "danger" when over 240 but contine to allow entry
-   } else if (answerInput === 0 || answerInput > 240) {
-      $("#next-button").addClass("disabled");
-      $("#characterCounter").addClass("text-danger");
    } else {
-      $("next-button").attr("disabled");
+      $("#next-button").click(function () {
+         window.location.href = "./create-imagery.html";
+      });
+      $("#next-button").attr("disabled", false);
+      $("#characterCounter").removeClass("text-danger");
    }
 });
 
