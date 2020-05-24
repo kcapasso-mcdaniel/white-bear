@@ -10,8 +10,10 @@ $("#lets-go-button").click(function () {
    var emailInput = $("#new-userEmail").val();
    // atLocal checks the emailInput to ensure there is a local part
    var atLocal = emailInput.indexOf("@");
-   // userEmail pulls the email address of the user but cuts it off at the @
+   // beforeAtLocal pulls the email address of the user but cuts it off at the @
    var beforeAtLocal = emailInput.slice(0, atLocal);
+   // userEmail represents a valid user email address
+   var userEmailValid = false;
    // if the email input is blank show the error message
    // else hide the error
    if (emailInput === "") {
@@ -27,13 +29,27 @@ $("#lets-go-button").click(function () {
    }
    // if email does not contain local part show error message
    if (atLocal == -1) {
-      console.log("#showErrorMessage");
+      console.log("showErrorMessage");
+      $("#emailErrorMessage").show();
+      $("#new-userEmail").addClass("is-invalid");
+      $("#new-userEmail").removeClass("is-valid");
+   } else {
+      userEmailValid = true;
+   }
+   if (userEmailValid === true) {
+      console.log("email is valid");
+      $("#emailErrorMessage").hide();
+      $("#new-userEmail").addClass("is-valid");
+      $("#new-userEmail").removeClass("is-invalid");
+   }
+   // if any kind of error is present show invalid
+   else {
       $("#emailErrorMessage").show();
       $("#new-userEmail").addClass("is-invalid");
       $("#new-userEmail").removeClass("is-valid");
    }
    // declare variable of valid //
-   var valid = false;
+   var validPassword = false;
    var passwordInput = $("#new-userPassword").val();
    console.log(passwordInput);
    // if the password input is blank show error message and invalid
@@ -47,16 +63,16 @@ $("#lets-go-button").click(function () {
          "Your password must be at least 9 characters."
       );
       // if the password contains email address show error message
-   } else if (passwordInput.indexOf(atLocal)) {
+   } else if (passwordInput.indexOf(atLocal) != 1) {
       console.log(passwordInput);
       $("#passwordErrorMessage").text(
          "Your email address cannot be used in your password."
       );
    } else {
-      valid = true;
+      validPassword = true;
    }
    // when no errors  present show is valid //
-   if (valid === true) {
+   if (validPassword === true) {
       console.log("password is valid");
       $("#passwordErrorMessage").hide();
       $("#new-userPassword").addClass("is-valid");
@@ -71,7 +87,7 @@ $("#lets-go-button").click(function () {
    // date and time fnction
    // console.log an OBJECT replacing numbers in createdOn with new number based on Javascript Date Object
    // need a variable for the OBJECT
-   if ((emailInput, passwordInput)) {
+   if ((userEmailValid, validPassword)) {
       var newUserSubmission = {
          _id: "getId",
          email: emailInput,
