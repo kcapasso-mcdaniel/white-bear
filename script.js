@@ -3,9 +3,15 @@ $("#sign-up-button").click(function () {
    $("#sign-up-form").toggleClass("d-none");
    $("#sign-up-button").remove();
 });
+
+//  Email and Password Validation
 $("#lets-go-button").click(function () {
+   // emailInput is the value of the user input for email address
    var emailInput = $("#new-userEmail").val();
-   console.log(emailInput);
+   // atLocal checks the emailInput to ensure there is a local part
+   var atLocal = emailInput.indexOf("@");
+   // userEmail pulls the email address of the user but cuts it off at the @
+   var beforeAtLocal = emailInput.slice(0, atLocal);
    // if the email input is blank show the error message
    // else hide the error
    if (emailInput === "") {
@@ -19,7 +25,13 @@ $("#lets-go-button").click(function () {
       $("#new-userEmail").addClass("is-valid");
       $("#new-userEmail").removeClass("is-invalid");
    }
-
+   // if email does not contain local part show error message
+   if (atLocal == -1) {
+      console.log("#showErrorMessage");
+      $("#emailErrorMessage").show();
+      $("#new-userEmail").addClass("is-invalid");
+      $("#new-userEmail").removeClass("is-valid");
+   }
    // declare variable of valid //
    var valid = false;
    var passwordInput = $("#new-userPassword").val();
@@ -34,7 +46,12 @@ $("#lets-go-button").click(function () {
       $("#passwordErrorMessage").text(
          "Your password must be at least 9 characters."
       );
-      // if the password input is greater than 9 characters show valid
+      // if the password contains email address show error message
+   } else if (passwordInput.indexOf(atLocal)) {
+      console.log(passwordInput);
+      $("#passwordErrorMessage").text(
+         "Your email address cannot be used in your password."
+      );
    } else {
       valid = true;
    }
@@ -51,7 +68,20 @@ $("#lets-go-button").click(function () {
       $("#new-userPassword").addClass("is-invalid");
       $("#new-userPassword").removeClass("is-valid");
    }
+   // date and time fnction
+   // console.log an OBJECT replacing numbers in createdOn with new number based on Javascript Date Object
+   // need a variable for the OBJECT
+   if ((emailInput, passwordInput)) {
+      var newUserSubmission = {
+         _id: "getId",
+         email: emailInput,
+         password: passwordInput,
+         createdOn: "getDate",
+      };
+   }
+   console.log(newUserSubmission);
 });
+
 // Create answer Character Counter
 
 $("#answerArea").keyup(function () {
