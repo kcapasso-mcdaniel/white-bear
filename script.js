@@ -4,6 +4,24 @@ $("#sign-up-button").click(function () {
    $("#sign-up-button").remove();
 });
 
+// // Date variables
+// function createTheDate() {
+// var getTodayDate = new Date();
+// var dateYear = getTodayDate.getYear() - 100;
+// console.log(dateYear);
+// var dateMonth = getTodayDate.getMonth();
+// console.log(dateMonth);
+// var dateDay = getTodayDate.getDay();
+// console.log(dateDay);
+// var timeHours = getTodayDate.getHours();
+// console.log(timeHours);
+// var timeMinutes = getTodayDate.getMinutes();
+// console.log(timeMinutes);
+// var timeSeconds = getTodayDate.getSeconds();
+// console.log(timeSeconds);
+// var timeMilliseconds = getTodayDate.getMilliseconds();
+// console.log(timeMilliseconds);
+
 //  Email and Password Validation
 $("#lets-go-button").click(function () {
    // emailInput is the value of the user input for email address
@@ -86,22 +104,22 @@ $("#lets-go-button").click(function () {
    }
    // // Create new Id and get Created On Date
 
-   // Date variables
-   var getTodayDate = new Date();
-   var dateYear = getTodayDate.getYear() - 100;
-   console.log(dateYear);
-   var dateMonth = getTodayDate.getMonth();
-   console.log(dateMonth);
-   var dateDay = getTodayDate.getDay();
-   console.log(dateDay);
-   var timeHours = getTodayDate.getHours();
-   console.log(timeHours);
-   var timeMinutes = getTodayDate.getMinutes();
-   console.log(timeMinutes);
-   var timeSeconds = getTodayDate.getSeconds();
-   console.log(timeSeconds);
-   var timeMilliseconds = getTodayDate.getMilliseconds();
-   console.log(timeMilliseconds);
+   // // Date variables
+   // var getTodayDate = new Date();
+   // var dateYear = getTodayDate.getYear() - 100;
+   // console.log(dateYear);
+   // var dateMonth = getTodayDate.getMonth();
+   // console.log(dateMonth);
+   // var dateDay = getTodayDate.getDay();
+   // console.log(dateDay);
+   // var timeHours = getTodayDate.getHours();
+   // console.log(timeHours);
+   // var timeMinutes = getTodayDate.getMinutes();
+   // console.log(timeMinutes);
+   // var timeSeconds = getTodayDate.getSeconds();
+   // console.log(timeSeconds);
+   // var timeMilliseconds = getTodayDate.getMilliseconds();
+   // console.log(timeMilliseconds);
 
    // this makes month and day two digit numbers
    function addPadding(num) {
@@ -165,8 +183,25 @@ $("#answerArea").keyup(function () {
 });
 
 //  Create imagery banners
-$("#save-imagery").click(function () {
+$("#save-imageryButton").click(function () {
    $("#overlay-success").toggleClass("d-none d-flex");
+
+   var timeMilliseconds = getTodayDate.getMilliseconds();
+   var randomNumberForId = Math.floor(Math.random() * 1000);
+   var getNewId = "" + timeMilliseconds + randomNumberForId;
+
+   var userImageryInput = {
+      _id: getNewId,
+      imagery:
+         "A delicious shishkebab but the first bite of meat after the pointy end is spicy & makes an exclamation point appear over my head like in a JRPG.",
+      answer:
+         "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
+      levelNum: 1,
+      successfulAttemptsNum: 0,
+      createdOn: getTodayDate,
+      lastAttemptedOn: getTodayDate,
+   };
+   console.log(userImageryInput);
 });
 $("#back-to-answer-imagery").click(function () {
    $("#overlay-danger").toggleClass("d-none d-flex");
