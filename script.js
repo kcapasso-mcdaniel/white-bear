@@ -63,7 +63,7 @@ $("#lets-go-button").click(function () {
          "Your password must be at least 9 characters."
       );
       // if the password contains email address show error message
-   } else if (passwordInput.indexOf(atLocal) != 1) {
+   } else if (passwordInput.indexOf(beforeAtLocal) > -1) {
       console.log(passwordInput);
       $("#passwordErrorMessage").text(
          "Your email address cannot be used in your password."
@@ -84,15 +84,54 @@ $("#lets-go-button").click(function () {
       $("#new-userPassword").addClass("is-invalid");
       $("#new-userPassword").removeClass("is-valid");
    }
-   // date and time fnction
-   // console.log an OBJECT replacing numbers in createdOn with new number based on Javascript Date Object
-   // need a variable for the OBJECT
-   if ((userEmailValid, validPassword)) {
+   // Create new Id and get Created On Date
+   //  getNewId is found by concatenating the current date and a random number between 000-999
+
+   var getNewId = timeMilliseconds + randomNumberForId;
+   console.log(getNewId);
+   var randomNumberForId = Math.floor(Math.random() * 1000);
+
+   // Date variables
+   var getTodayDate = new Date();
+   var dateYear = getTodayDate.getYear() - 100;
+   console.log(dateYear);
+   var dateMonth = getTodayDate.getMonth();
+   console.log(dateMonth);
+   var dateDay = getTodayDate.getDay();
+   console.log(dateDay);
+   var timeHours = getTodayDate.getHours();
+   console.log(timeHours);
+   var timeMinutes = getTodayDate.getMinutes();
+   console.log(timeMinutes);
+   var timeSeconds = getTodayDate.getSeconds();
+   console.log(timeSeconds);
+   var timeMilliseconds = getTodayDate.getMilliseconds();
+   console.log(timeMilliseconds);
+
+   function addPadding(num) {
+      if (String(num).length < 2) {
+         return "0" + num.toString();
+      } else {
+         return num;
+      }
+   }
+
+   var getTodayDate =
+      "" + //turns it into a readable string
+      addPadding(dateYear) +
+      addPadding(dateMonth) +
+      addPadding(dateDay) +
+      addPadding(timeHours) +
+      addPadding(timeMinutes) +
+      addPadding(timeSeconds);
+   console.log(getTodayDate);
+
+   if (userEmailValid && validPassword) {
       var newUserSubmission = {
-         _id: "getId",
+         _id: getNewId,
          email: emailInput,
          password: passwordInput,
-         createdOn: "getDate",
+         createdOn: getTodayDate,
       };
    }
    console.log(newUserSubmission);
