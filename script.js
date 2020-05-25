@@ -84,12 +84,7 @@ $("#lets-go-button").click(function () {
       $("#new-userPassword").addClass("is-invalid");
       $("#new-userPassword").removeClass("is-valid");
    }
-   // Create new Id and get Created On Date
-   //  getNewId is found by concatenating the current date and a random number between 000-999
-
-   var getNewId = timeMilliseconds + randomNumberForId;
-   console.log(getNewId);
-   var randomNumberForId = Math.floor(Math.random() * 1000);
+   // // Create new Id and get Created On Date
 
    // Date variables
    var getTodayDate = new Date();
@@ -108,6 +103,7 @@ $("#lets-go-button").click(function () {
    var timeMilliseconds = getTodayDate.getMilliseconds();
    console.log(timeMilliseconds);
 
+   // this makes month and day two digit numbers
    function addPadding(num) {
       if (String(num).length < 2) {
          return "0" + num.toString();
@@ -125,6 +121,13 @@ $("#lets-go-button").click(function () {
       addPadding(timeMinutes) +
       addPadding(timeSeconds);
    console.log(getTodayDate);
+
+   //  variable for random number for Id
+   var randomNumberForId = Math.floor(Math.random() * 1000);
+   console.log(randomNumberForId);
+
+   // concatenate timeMilliseconds and randomNumberFor Id to create new id when email and password are valid
+   var getNewId = "" + timeMilliseconds + randomNumberForId;
 
    if (userEmailValid && validPassword) {
       var newUserSubmission = {
