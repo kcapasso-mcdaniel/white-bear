@@ -84,45 +84,14 @@ $("#lets-go-button").click(function () {
       $("#new-userPassword").addClass("is-invalid");
       $("#new-userPassword").removeClass("is-valid");
    }
-   // // Create new Id and get Created On Date
 
-   // Date variables
-   var getTodayDate = new Date();
-   var dateYear = getTodayDate.getYear() - 100;
-   console.log(dateYear);
-   var dateMonth = getTodayDate.getMonth();
-   console.log(dateMonth);
-   var dateDay = getTodayDate.getDay();
-   console.log(dateDay);
-   var timeHours = getTodayDate.getHours();
-   console.log(timeHours);
-   var timeMinutes = getTodayDate.getMinutes();
-   console.log(timeMinutes);
-   var timeSeconds = getTodayDate.getSeconds();
-   console.log(timeSeconds);
-   var timeMilliseconds = getTodayDate.getMilliseconds();
-   console.log(timeMilliseconds);
+   // Generate _id and created On Date
 
-   // two-digit number format
-   function addPadding(num) {
-      if (String(num).length < 2) {
-         return "0" + num.toString();
-      } else {
-         return num;
-      }
-   }
+   // calling my createTheDate function to generate the createdOn Date
+   // this function includes the timeMilliseconds variable for generate _id
+   createTheDate();
 
-   var getTodayDate =
-      "" + //turns it into a readable string
-      addPadding(dateYear) +
-      addPadding(dateMonth) +
-      addPadding(dateDay) +
-      addPadding(timeHours) +
-      addPadding(timeMinutes) +
-      addPadding(timeSeconds);
-   console.log(getTodayDate);
-
-   //  variable for random number for Id
+   //  variable for random number for generate _id
    var randomNumberForId = Math.floor(Math.random() * 1000);
    console.log(randomNumberForId);
 
@@ -134,7 +103,7 @@ $("#lets-go-button").click(function () {
          _id: getNewId,
          email: emailInput,
          password: passwordInput,
-         createdOn: getTodayDate,
+         createdOn: getToday,
       };
    }
    console.log(newUserSubmission);
@@ -168,11 +137,15 @@ $("#answerArea").keyup(function () {
 $("#save-imageryButton").click(function () {
    $("#overlay-success").toggleClass("d-none d-flex");
 
-   var getTodayDate = new Date();
+   // // Date variables
+
+   createTheDate();
+
    //  variable for random number for Id
    var randomNumberForId = Math.floor(Math.random() * 1000);
    console.log(randomNumberForId);
-   var timeMilliseconds = getTodayDate.getMilliseconds();
+
+   // concatenate timeMilliseconds and randomNumberFor Id to create new id when email and password are valid
    var getNewId = "" + timeMilliseconds + randomNumberForId;
 
    var userImageryInput = {
@@ -183,8 +156,8 @@ $("#save-imageryButton").click(function () {
          "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
       levelNum: 1,
       successfulAttemptsNum: 0,
-      createdOn: getTodayDate,
-      lastAttemptedOn: getTodayDate,
+      createdOn: getToday,
+      lastAttemptedOn: getToday,
    };
    console.log(userImageryInput);
 });
@@ -199,3 +172,43 @@ $("#customCheck").click(function () {
 $("#dropdown-toggle-all").click(function () {
    $("#dropdown-menu-list").toggleClass("show");
 });
+
+// Create the date function
+var getToday = "";
+var timeMilliseconds = "";
+
+function createTheDate() {
+   var getTodayDate = new Date();
+   var dateYear = getTodayDate.getYear() - 100;
+   console.log(dateYear);
+   var dateMonth = getTodayDate.getMonth() + 1;
+   console.log(dateMonth);
+   var dateDay = getTodayDate.getDate();
+   console.log(dateDay);
+   var timeHours = getTodayDate.getHours();
+   console.log(timeHours);
+   var timeMinutes = getTodayDate.getMinutes();
+   console.log(timeMinutes);
+   var timeSeconds = getTodayDate.getSeconds();
+   console.log(timeSeconds);
+   timeMilliseconds = getTodayDate.getMilliseconds();
+   console.log(timeMilliseconds);
+
+   getToday =
+      "" + //turns it into a readable string
+      addPadding(dateYear) +
+      addPadding(dateMonth) +
+      addPadding(dateDay) +
+      addPadding(timeHours) +
+      addPadding(timeMinutes) +
+      addPadding(timeSeconds);
+   console.log(getToday);
+}
+
+function addPadding(num) {
+   if (String(num).length < 2) {
+      return "0" + num.toString();
+   } else {
+      return num;
+   }
+}
