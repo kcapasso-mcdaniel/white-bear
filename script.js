@@ -484,8 +484,8 @@ $("#lets-go-button").click(function () {
       $("#passwordErrorMessage").text(
          "Your email address cannot be used in your password."
       );
-   } else if (passwordInput.includes(commonTest) != true) {
-      $("#passwordErrorMessage").text("Please enter a less common password");
+      // } else if (commonTest.includes(passwordInput) >= 1) {
+      //    $("#passwordErrorMessage").text("NO");
    } else {
       validPassword = true;
    }
