@@ -417,8 +417,8 @@ var passwordList = [
    "zzzzzzz1",
 ];
 
-var commonTest = passwordList.filter((word) => word.length > 8 === true);
-console.log(commonTest);
+var filteredPasswords = passwordList.filter((word) => word.length > 8 === true);
+console.log(filteredPasswords);
 
 //  Email and Password Validation
 $("#lets-go-button").click(function () {
@@ -484,9 +484,12 @@ $("#lets-go-button").click(function () {
       $("#passwordErrorMessage").text(
          "Your email address cannot be used in your password."
       );
-      // } else if (commonTest.includes(passwordInput) >= 1) {
-      //    $("#passwordErrorMessage").text("NO");
+      // if the password input matches the filtered password list show error message
+   } else if (filteredPasswords.includes(passwordInput)) {
+      console.log("password-is-found-in-the-list");
+      $("#passwordErrorMessage").text("Please do not use a common password");
    } else {
+      console.log("password is unique");
       validPassword = true;
    }
    // when no errors  present show is valid //
@@ -569,10 +572,12 @@ $("#save-imageryButton").click(function () {
    // userImageryInput tracks user input
    var userImageryInput = {
       _id: getNewId,
-      imagery:
-         "A delicious shishkebab but the first bite of meat after the pointy end is spicy & makes an exclamation point appear over my head like in a JRPG.",
-      answer:
-         "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
+      imagery: encodeURIComponent(
+         "A delicious shishkebab but the first bite of meat after the pointy end is spicy & makes an exclamation point appear over my head like in a JRPG."
+      ),
+      answer: encodeURIComponent(
+         "The syntax for making a comment in HTML is <!-- Mike's comment here -->"
+      ),
       levelNum: 1,
       successfulAttemptsNum: 0,
       createdOn: getToday,
