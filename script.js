@@ -64,6 +64,7 @@ function addTwoPadding(num) {
 }
 
 // Variable for PassWord Validation
+// Common password list for validation
 var passwordList = [
    "x002tp00",
    "x4ww5qdr",
@@ -417,6 +418,7 @@ var passwordList = [
    "zzzzzzz1",
 ];
 
+// filter method to only give the words that are greater than 8 characters
 var filteredPasswords = passwordList.filter((word) => word.length > 8 === true);
 console.log(filteredPasswords);
 
@@ -484,7 +486,7 @@ $("#lets-go-button").click(function () {
       $("#passwordErrorMessage").text(
          "Your email address cannot be used in your password."
       );
-      // if the password input matches the filtered password list show error message
+      // if the password input matches the common password list show error message
    } else if (filteredPasswords.includes(passwordInput)) {
       console.log("password-is-found-in-the-list");
       $("#passwordErrorMessage").text("Please do not use a common password");
@@ -506,14 +508,14 @@ $("#lets-go-button").click(function () {
       $("#new-userPassword").removeClass("is-valid");
    }
 
-   // New User Submission Entry - once email and password are valid let's go button
-   // will generate a new id in the console and also noted the exact date and time of entry
+   // New User Submission Entry - created after email and password pass validation
    // calling my createTheDate function to generate the createdOn Date
    createTheDate();
    //  variable for random number for generate _id
    var randomNumberForId = Math.floor(Math.random() * 1000);
    console.log(randomNumberForId);
    // concatenate timeMilliseconds & randomNumberForId to create new six-digit id
+   // will generate a new id in the console and also noted the exact date and time of entry
    var getNewId =
       "" +
       addThreePadding(timeMilliseconds) +
@@ -524,6 +526,7 @@ $("#lets-go-button").click(function () {
          _id: getNewId,
          email: emailInput,
          password: passwordInput,
+         // Number changes the date from a string to a number
          createdOn: Number(getToday),
       };
    }
@@ -558,6 +561,9 @@ $("#answerArea").keyup(function () {
 $("#save-imageryButton").click(function () {
    $("#overlay-success").toggleClass("d-none d-flex");
 
+   // calling the date for createdOn and the timeMilliseconds for id
+   createTheDate();
+
    //  variable for random number for Id
    var randomNumberForId = Math.floor(Math.random() * 1000);
    console.log(randomNumberForId);
@@ -567,21 +573,22 @@ $("#save-imageryButton").click(function () {
       addThreePadding(timeMilliseconds) +
       addThreePadding(randomNumberForId);
 
-   // calling the date for createdOn and the timeMilliseconds for id
-   createTheDate();
    // userImageryInput tracks user input
    var userImageryInput = {
       _id: getNewId,
+      // encode to prevent users from entering syntax that could jeaopardize the security of database and application
       imagery: encodeURIComponent(
          "A delicious shishkebab but the first bite of meat after the pointy end is spicy & makes an exclamation point appear over my head like in a JRPG."
       ),
+      // encode to prevent users from entering syntax that could jeaopardize the security of database and application
       answer: encodeURIComponent(
          "The syntax for making a comment in HTML is <!-- Mike's comment here -->"
       ),
       levelNum: 1,
       successfulAttemptsNum: 0,
-      createdOn: getToday,
-      lastAttemptedOn: getToday,
+      // Number changes the date from a string to a Number
+      createdOn: Number(getToday),
+      lastAttemptedOn: Number(getToday),
    };
    console.log(userImageryInput);
 });
