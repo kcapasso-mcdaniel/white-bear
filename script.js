@@ -420,7 +420,7 @@ var passwordList = [
 
 // filter method to only give the words that are greater than 8 characters
 var filteredPasswords = passwordList.filter((word) => word.length > 8 === true);
-console.log(filteredPasswords);
+// console.log(filteredPasswords);
 
 //  Email and Password Validation
 $("#lets-go-button").click(function () {
@@ -432,6 +432,17 @@ $("#lets-go-button").click(function () {
    var beforeAtLocal = emailInput.slice(0, atLocal);
    // userEmail represents a valid user email address
    var userEmailValid = false;
+
+   // iterate through a string for unique characters
+   var uniqueCharacters = "";
+   for (let charIndex in beforeAtLocal) {
+      // if unique characters exist within the password Input then concat them to the string
+      if (uniqueCharacters.indexOf(beforeAtLocal[charIndex]) === -1) {
+         uniqueCharacters = uniqueCharacters + beforeAtLocal[charIndex];
+      }
+   }
+   console.log(uniqueCharacters);
+
    // if the email input is blank show the error message
    // else hide the error
    if (emailInput === "") {
@@ -449,6 +460,12 @@ $("#lets-go-button").click(function () {
    if (atLocal == -1) {
       console.log("showErrorMessage");
       $("#emailErrorMessage").show();
+      $("#new-userEmail").addClass("is-invalid");
+      $("#new-userEmail").removeClass("is-valid");
+      // if the number of unique characters is >= 3 valid email
+   } else if (uniqueCharacters.length < 3) {
+      console.log("showErrorMessage");
+      $("#emailErrorMessage").text("Please use at least 3 unique characters.");
       $("#new-userEmail").addClass("is-invalid");
       $("#new-userEmail").removeClass("is-valid");
    } else {
@@ -491,7 +508,6 @@ $("#lets-go-button").click(function () {
       console.log("password-is-found-in-the-list");
       $("#passwordErrorMessage").text("Please do not use a common password");
    } else {
-      console.log("password is unique");
       validPassword = true;
    }
    // when no errors  present show is valid //
@@ -501,6 +517,7 @@ $("#lets-go-button").click(function () {
       $("#new-userPassword").addClass("is-valid");
       $("#new-userPassword").removeClass("is-invalid");
    }
+
    // if any kind of error is present show invalid
    else {
       $("#passwordErrorMessage").show();
@@ -508,12 +525,34 @@ $("#lets-go-button").click(function () {
       $("#new-userPassword").removeClass("is-valid");
    }
 
+   // encrypt the password
+
+   var passwordEncrypted = "";
+
+   for (let index in passwordInput) {
+      // let character = passwordInput[index];
+      // change character to number and increment by 1
+      var character = passwordInput.charCodeAt(index) + 1;
+      // change number back to string
+      var character = String.fromCharCode(character);
+      // character has been incremented therefore { is used in place of "z"
+      if (character == "{") {
+         character = "a";
+      }
+      // character has already been incremented therefore [ is used in place of "Z"
+      if (character == "[") {
+         character = "A";
+      }
+      passwordEncrypted = passwordEncrypted + character;
+   }
+   console.log("Password encrypted", passwordEncrypted);
+
    // New User Submission Entry - created after email and password pass validation
    // calling my createTheDate function to generate the createdOn Date
    createTheDate();
    //  variable for random number for generate _id
    var randomNumberForId = Math.floor(Math.random() * 1000);
-   console.log(randomNumberForId);
+   // console.log(randomNumberForId);
    // concatenate timeMilliseconds & randomNumberForId to create new six-digit id
    // will generate a new id in the console and also noted the exact date and time of entry
    var getNewId =
@@ -525,7 +564,7 @@ $("#lets-go-button").click(function () {
       var newUserSubmission = {
          _id: getNewId,
          email: emailInput,
-         password: passwordInput,
+         password: passwordEncrypted,
          // Number changes the date from a string to a number
          createdOn: Number(getToday),
       };
