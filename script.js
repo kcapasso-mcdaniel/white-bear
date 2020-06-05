@@ -530,7 +530,6 @@ $("#lets-go-button").click(function () {
    var passwordEncrypted = "";
 
    for (let index in passwordInput) {
-      // let character = passwordInput[index];
       // change character to number and increment by 1
       var character = passwordInput.charCodeAt(index) + 1;
       // change number back to string
@@ -545,7 +544,6 @@ $("#lets-go-button").click(function () {
       }
       passwordEncrypted = passwordEncrypted + character;
    }
-   console.log("Password encrypted", passwordEncrypted);
 
    // New User Submission Entry - created after email and password pass validation
    // calling my createTheDate function to generate the createdOn Date
