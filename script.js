@@ -433,12 +433,13 @@ $("#lets-go-button").click(function () {
    // userEmail represents a valid user email address
    var userEmailValid = false;
 
-   // iterate through a string for unique characters
-   var uniqueCharacters = "";
+   // add notes
+   var uniqueCharacters = [];
    for (let charIndex in beforeAtLocal) {
-      // if unique characters exist within the password Input then concat them to the string
-      if (uniqueCharacters.indexOf(beforeAtLocal[charIndex]) === -1) {
-         uniqueCharacters = uniqueCharacters + beforeAtLocal[charIndex];
+      // add notes
+      var character = beforeAtLocal[charIndex];
+      if (uniqueCharacters.includes(character) === false) {
+         uniqueCharacters.push(character);
       }
    }
    console.log(uniqueCharacters);
@@ -526,7 +527,7 @@ $("#lets-go-button").click(function () {
    }
 
    // encrypt the password
-
+   // charCode is the numeric value of the character
    var passwordEncrypted = "";
 
    for (let index in passwordInput) {
