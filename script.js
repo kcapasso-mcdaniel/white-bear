@@ -433,17 +433,15 @@ $("#lets-go-button").click(function () {
    // userEmail represents a valid user email address
    var userEmailValid = false;
 
-   // add notes
-   var uniqueCharacters = [];
+   // count number of unique characters
+   const uniqueCharacters = [];
    for (let charIndex in beforeAtLocal) {
-      // add notes
       var character = beforeAtLocal[charIndex];
       if (uniqueCharacters.includes(character) === false) {
          uniqueCharacters.push(character);
       }
    }
-   console.log(uniqueCharacters);
-
+   console.log("uniqueCharacters", uniqueCharacters);
    // if the email input is blank show the error message
    // else hide the error
    if (emailInput === "") {
